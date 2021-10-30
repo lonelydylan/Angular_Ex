@@ -1,0 +1,24 @@
+
+<div>
+  <h4>id: {{ userinfo.id }}</h4>
+  <h4>Name: {{ userinfo.name }}</h4>
+  <h4>Surname: {{ userinfo.surname }}</h4>
+  <h4>Age: {{ userinfo.age }}</h4>
+  <h4>Date of birth: {{ userinfo.dateOfBirth | date}}</h4>
+  <h3>Address:</h3>
+  <div *ngFor="let c in userinfo.address">
+    <b> {{ c.key }} : {{ c.value }}</b>
+  </div>
+  <h4>Role: {{ userinfo.role }}</h4>
+  <h4>Username: {{ userinfo.username }}</h4>
+  <div *ngIf="userinfo.profilePhotoUrl">
+    <img [src]="userinfo.profilePhotoUrl" alt="" />
+  </div>
+  <h4>Gender:{{ userinfo.gender }}</h4>
+  <ng-container *ngIf="userinfo.companies && userinfo.companies.length">
+    <h4>Company:{{ userinfo.companies[0].name }}</h4>
+    <h4>Description:{{ userinfo.companies[0].description }}</h4>
+    <h4>Company:{{ userinfo.companies[1].name }}</h4>
+    <h4>Description:{{ userinfo.companies[1].description }}</h4>
+  </ng-container>
+</div>
