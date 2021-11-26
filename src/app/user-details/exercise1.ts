@@ -1,5 +1,5 @@
- enum Genere {'male', 'female', 'other'};
- enum Ruolo {'staff', 'student', 'manager', 'admin'};
+ enum Gender {'male', 'female', 'other'};
+ enum Role {'staff', 'student', 'manager', 'admin'};
 
 export interface Lavoro {
     id: number,

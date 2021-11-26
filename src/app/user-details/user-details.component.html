@@ -1,13 +1,12 @@
-
 <div>
   <h4>id: {{ userinfo.id }}</h4>
   <h4>Name: {{ userinfo.name }}</h4>
   <h4>Surname: {{ userinfo.surname }}</h4>
   <h4>Age: {{ userinfo.age }}</h4>
-  <h4>Date of birth: {{ userinfo.dateOfBirth | date}}</h4>
+  <h4>Date of birth: {{ userinfo.dateOfBirth | date }}</h4>
   <h3>Address:</h3>
-  <div *ngFor="let c in userinfo.address">
-    <b> {{ c.key }} : {{ c.value }}</b>
+  <div *ngFor="let address; in: userinfo.address">
+    <b> {{ address.key }} : {{ address.value }}</b>
   </div>
   <h4>Role: {{ userinfo.role }}</h4>
   <h4>Username: {{ userinfo.username }}</h4>
